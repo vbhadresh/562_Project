@@ -11,7 +11,6 @@ var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 
 var app = express();
-mongoose.connect('localhost:27017/ecommerce');
 mongoose.connect('mongodb://localhost:27017/ecommerce', { useNewUrlParser: true });
 
 // view engine setup
