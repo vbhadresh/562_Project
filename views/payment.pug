@@ -1,0 +1,203 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Acme Web Design
+  link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  script(src='https://code.jquery.com/ui/1.12.0/jquery-ui.js' integrity='sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=' crossorigin='anonymous')
+  script(type='text/javascript').
+    function address(){
+    let divEle=document.createElement('div');
+    //divEle.style.border-style='solid';
+    //divEle.style.box-shadow='0 0 20px 0 rgba(72,94,116,0.7)';
+    let h2=document.createElement('h2');
+    divEle.appendChild(h2);
+    h2.innerHTML='Address Added';
+    $('add-address').replaceWith(divEle);
+    }
+.container
+  br
+  .shopping-bag-details(style='border-style: solid; border-width: 5px; border-color: #f7f7f7;padding: 5px; text-align: center;')
+    span(style='font-family: AvenirLTStd35Light,Arial,Helvetica,Verdana,Sans-serif; font-size: 32px; color: #c00;') Your Current Shopping Bag
+  br
+  .wrapper.animated.bounceInLeft
+    br
+    div
+      div(style='box-shadow: 0 0 20px 0 rgba(72,94,116,0.7); width:290px; height:300px; margin:20px; padding:1em;font-size: 20px; font-family: AvenirLTStd35Light sans-serif;position:relative;left:-370px;display: inline-block;')
+        div(style='border-bottom: 1px solid; margin:9px;')
+          p  Shipping Address
+        .add-address
+          form#shipping-address-id(onsubmit='address()')
+            .form-group_1
+              input.form-control(type='text' name='address' placeholder='2951 S King Drive' required='')
+            br
+            .form-group_2
+              input.form-control(type='text' name='city' placeholder='Chicago' required='')
+            br
+            .group-buttons
+              .form-group_3(style='display: inline-block;')
+                select.delivery-days
+                  option(value='AZ')  AZ
+                  option(value='AR')  AR
+                  option(value='CA')  CA
+                  option(value='CO')  CO
+                  option(value='CT')  CT
+                  option(value='DE')  DE
+                  option(value='FL')  FL
+                  option(value='GA')  GA
+                  option(value='HI')  HI
+                  option(value='ID')  ID
+                  option(value='IL')  IL
+                  option(value='IN')  IN
+                  option(value='IA')  IA
+                  option(value='KS')  KS
+                  option(value='KY')  KY
+                  option(value='LA')  LA
+                  option(value='ME')  ME
+                  option(value='MD')  MD
+                  option(value='MA')  MA
+                  option(value='MI')  MI
+                  option(value='MN')  MN
+                  option(value='MS')  MS
+                  option(value='MO')  MO
+                  option(value='MT')  MT
+                  option(value='NE')  NE
+                  option(value='NV')  NV
+                  option(value='NH')  NH
+                  option(value='NJ')  NJ
+                  option(value='NM')  NM
+                  option(value='NY')  NY
+                  option(value='NC')  NC
+                  option(value='ND')  ND
+                  option(value='OH')  OH
+                  option(value='OK')  OK
+                  option(value='OR')  OR
+                  option(value='PA')  PA
+                  option(value='RI')  RI
+                  option(value='SC')  SC
+                  option(value='SD')  SD
+                  option(value='TN')  TN
+                  option(value='TX')  TX
+                  option(value='UT')  UT
+                  option(value='VT')  VT
+                  option(value='VA')  VA
+                  option(value='WA')  WA
+                  option(value='WV')  WV
+                  option(value='WI')  WI
+                  option(value='WY')  WY
+              div(style='margin: 10px; height:140px;  width:30px;right:10px;position: relative;display: inline-block;')
+                input#add-Address.btn.btn-danger(type='submit' value='Add')
+      .contact-info(style='display: inline-block; width:290px; height:180px;margin: 10px;position: relative;left:-350px;top:-95px;box-shadow: 0 0 20px 0 rgba(72,94,116,0.7)')
+        #contact-det.form-group(style='margin: 30px;')
+          p(style='font-family: AvenirLTStd35Light sans-serif; font-size: 20px')  Contact- Info
+          input.form-control(type='text' name='phone-number' placeholder='312-678-8907' required='')
+          br
+          button.btn.btn-danger(type='submit' value='Add Phone')  Add Phone
+      .shipping-info(style='display: inline-block;box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);position: relative;right:-330px; top:-280px; height: 100px;')
+        .delvery-info(style='margin: 10px;')
+          div(style='display:inline-block;')
+            p  Select Delivery Options 
+          div(style='display: inline-block; align-items: center;')
+            select.delivery-days
+              option(value='1')  1 - 2 Business Days
+              option(value='2')  Next Day
+              option(value='3')  3 - 5 Business Days : Free
+    .checkout-details-info(style='position: relative; top:-100px')
+      .bag-container
+        .Shopping-bag(style='color: #c00; font-size: 20px; font-weight: bold; font-family: AvenirLTStd35Light,Arial,Helvetica,Verdana,Sans-serif;')
+          h4  Current Shopping Bag 
+        .total
+          .totalStandard(style='display:inline-block; float:left;')  SubTotal 
+          #bagMerchandiseTotal(style='float:right;')  $459 
+        br
+        br
+        .total-shipping(style='')
+          .totalStandard(style='display:inline-block; float:left;')  Shipping 
+          #bagMerchandiseTotal(style=' float:right;')  Free 
+        br
+        br
+        .total-tax(style='')
+          .totalStandard(style='display:inline-block; float:left;')  Tax 
+          #bagMerchandiseTotal(style=' float:right;')  $459 
+        br
+        br
+        .total-order(style='border-bottom: 1px solid black; border-bottom-width: thin;')
+          .totalStandard(style='display:inline-block; float:left;')  Order Total
+          #bagMerchandiseTotal(style=' float:right;')  $459 
+        div(style='border-bottom: 1px solid black; border-bottom-width: thin;')
+      br
+      br
+      br
+      .keep-shopping(align='center')
+        p(text-align='center')
+          a(href='#')  Keep Shopping
+        p(style='color: grey; font-size: 10px;')  we accept a variety of payment options 
+        img(src='public/images/creditcard.png' width='150px' height='40px' alt='src not found')
+    .payment
+      div(align='center' style='background-color:#CB4335;height:30px;color:white;')
+        h3(style='top:2px;') Payment Details 
+      br
+      form(method='POST' action='payment')
+        .paymenttable(style='align:center;width:490px;')
+          table.paymentform(style='align:center;width:490px;')
+            tr
+              input(type='radio' name='credit' value='Credit Card')
+              |  &nbsp;&nbsp;Credit Card 
+              input(type='radio' name='credit' value='Debit Card')
+              | &nbsp;&nbsp;Debit Card
+            tr
+              td
+                label Card Holder&apos;s Name
+              td
+                input(type='text' name='cardholdersname' placeholder='Eg: John Federick' required='')
+            tr
+              td
+                label CardNumber
+              td
+                input(type='text' name='cardNumber' placeholder='Eg: 2345 6789 5678 6754' required='')
+            tr
+              td
+                label Expiry Date
+              td
+                select#month(name='month')
+                  option(value='01') 01
+                  option(value='02') 02
+                  option(value='03') 03
+                  option(value='04') 04
+                  option(value='05') 05
+                  option(value='06') 06
+                  option(value='07') 07
+                  option(value='08') 08
+                  option(value='09') 09
+                  option(value='10') 10
+                  option(value='11') 11
+                  option(value='12') 12
+                select#year(name='year')
+                  option(value='2018') 2018
+                  option(value='2019') 2019
+                  option(value='2020') 2020
+                  option(value='2021') 2021
+                  option(value='2022') 2022
+                  option(value='2023') 2023
+                  option(value='2024') 2024
+                  option(value='2025') 2025
+                  option(value='2026') 2026
+                  option(value='2027') 2027
+                  option(value='2028') 2028
+                  option(value='2029') 2029
+            tr
+              td
+                label CVC
+              td
+                input(type='text' name='email' placeholder='Eg: 234' required='')
+            tr
+              td.full
+                button.btn.btn-warning(value='submit') Cancel
+              td.full
+                button.btn.btn-primary(value='submit') Submit
