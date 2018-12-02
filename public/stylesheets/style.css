@@ -2,3 +2,13 @@
     max-height: 120px;
 
 }
+
+.thumbnail .prod_details{
+    color: #808000;
+    font-style: italic;
+}
+
+.thumbnail .price{
+    font-size: 15px;
+    font-weight : bold;
+}
